@@ -29,12 +29,12 @@ The class CnnSpider incorporates input from the user to navigate the CNN website
 In some cases the extracted data requires additional processing. Therefore, a data cleaning step is incorporated into the parsing process. Inconsistencies were especially observed for the author where the HTML-tags somtimes contained additional text, a url or missing the name alltogether.
 For cases with additional text and url the content is reduced to the name of the author and for missing author names the placeholder _CNN_ is put in place.
 
-### 2. Storing the Data (...)
+### 2. Storing the Data (cnn_news.py)
 Data is stored in _xml_ format. For each articel, the incdividual content groupas are enclosed withing corresponding tags:
 
 <img src="images/xml_structure.jpg" width="45%" />
 
-The resulting _xml_ database is named according to the query made during the collection process.
+The resulting _xml_ database is named according to the query made during the collection process and strored in the _databases_ direcotory.
 
 ### 3. Acsessing the Data (acess.py)
 The function _access_xml()_ which is responsible for accessing the data can be ether called internally from _cnn_news.py_ after finishing the scraping process or externally by running _python access.py_ from the terminal.
