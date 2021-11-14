@@ -30,8 +30,10 @@ In some cases the extracted data requires additional processing. Therefore, a da
 For cases with additional text and url the content is reduced to the name of the author and for missing author names the placeholder _CNN_ is put in place.
 
 ### 2. Storing the Data (...)
-Data is stored in _xml_ format. For each articel, the incdividual content groupas are enclosed withing corresponding tags (_data_, _title_, _url_, _short_text (summary)_, _full_text_).
-(picture)
+Data is stored in _xml_ format. For each articel, the incdividual content groupas are enclosed withing corresponding tags:
+
+<img src="images/xml_structure.jpg" width="45%" />
+
 The resulting _xml_ database is named according to the query made during the collection process.
 
 ### 3. Acsessing the Data (acess.py)
