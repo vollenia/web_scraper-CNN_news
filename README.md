@@ -12,15 +12,12 @@ The scraping framework _Scrapy_ was used and the code was tested to run under Py
 This is all you need to know to scrape the CNN website and store/access the created databases.
 
 ## Data
---CNN (Cable News Network) webpage
-(provides a listing of articles with the corresponding dates)
-Listings range form August 2011 - Present day (DATE)
+The CNN (Cable News Network) website was used as the souce of information for this project. CNN provides a [_sitemap_](https://edition.cnn.com/sitemap.html) to the listings of all published articles, beginning in August of 2011. This is critical since it enables the articles on the website to be searched by year and month.
 
 ## Framework
-The web scraping framework _Scrapy_ was used in this project. It was built with python and is open souce. The idea behind using Scrapy, contrary to other available tools, was to have a framework that is specifically designed for the taks of web scraping and therefore, provides more then just the basic functionality. Ultimately, this results in more control over the process of collecting, preparing, storing and accessing the data.
+The web scraping framework [_Scrapy_](https://github.com/scrapy/scrapy) was used in this project. It was built with python and is open souce. The idea behind using Scrapy, contrary to other available tools, was to have a framework that is specifically designed for the taks of web scraping and therefore, provides more then just the basic functionality. Ultimately, this results in more control over the process of collecting, preparing, storing and accessing the data.
 
 ## Modules Overview
-
 The main steps of the project can be summarized as follows:
 *Collect data from HTML
 *Prepare data to be a database in XML format
