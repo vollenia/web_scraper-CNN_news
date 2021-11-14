@@ -33,9 +33,9 @@ In some cases the extracted data requires additional processing. Therefore, a da
 For cases with additional text and url the content is reduced to the name of the author and for missing author names the placeholder _CNN_ is put in place.
 
 ### 2. Storing the Data (...)
-Data is stored as _.xml_ file. For each articel, the incdividual content groupas are enclosed withing corresponding tags (_data_, _title_, _url_, _short_text (summary)_, _full_text_).
+Data is stored in _xml_ format. For each articel, the incdividual content groupas are enclosed withing corresponding tags (_data_, _title_, _url_, _short_text (summary)_, _full_text_).
 (picture)
-The resulting _xml database_ is named according to the query made during the collection process.
+The resulting _xml_ database is named according to the query made during the collection process.
 
 ### 3. Acsessing the Data (acess.py)
 The function _access_xml()_ which is responsible for accessing the data can be ether called internally from _cnn_news.py_ after finishing the scraping process or externally by running _python access.py_ from the terminal.
