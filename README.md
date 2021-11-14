@@ -17,7 +17,7 @@ This is all you need to know to scrape the CNN website and store/access the crea
 Listings range form August 2011 - Present day (DATE)
 
 ## Framework
-Scrapy (what is scrapy)
+The web scraping framework _Scrapy_ was used in this project. It was built with python and is open souce. The idea behind using Scrapy, contrary to other available tools, was to have a framework that is specifically designed for the taks of web scraping and therefore, provides more then just the basic functionality. Ultimately this results in more control over the process of collecting, preparing, storing and accessing the data.
 
 ## Modules Overview
 
