@@ -1,4 +1,5 @@
 /scraper.venv
 /databases
+/__pycache__
 /cnn/__pycache__
 /cnn/spiders/__pycache__

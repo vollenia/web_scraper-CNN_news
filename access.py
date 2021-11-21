@@ -26,8 +26,12 @@ def access_xml():
 
     # Request XPath-Query and use it to search in XML-tree
     tag = str(input("What category would you like to search (date, title, author, text)?: "))
+    if tag == "text":
+        tag_xml = "textfull"
+    else:
+        tag_xml = tag 
     keyword = input("What keyword would you like to serch for?: ")
-    query = "//*[contains(" + tag + ", '" + keyword + "')]"
+    query = "//*[contains(" + tag_xml + ", '" + keyword + "')]"
     #print(f'{query=}')
     #query = input("Enter an XPath-query to search the database: ")
     result = root.xpath(query)

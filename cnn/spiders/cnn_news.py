@@ -5,7 +5,7 @@ import scrapy
 from scrapy import signals
 from ..items import CnnItem
 import functools
-#from ...access import access_xml
+from access import access_xml
 
 # Requesting the year/month to collect the data
 year = input("Enter the YEAR you want to retrieve: ")
@@ -39,6 +39,7 @@ class CnnSpider(scrapy.Spider):
         access = str(input("4/4: Do you want to search the scraped data (y/n)?: "))
         if access == "y":
             print(f'Accessing the xml internally...')
+            access_xml()
 
     # Parse the sitemap - view of the given month
     def parse(self, response):
