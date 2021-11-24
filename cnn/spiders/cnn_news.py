@@ -17,8 +17,8 @@ class CnnSpider(scrapy.Spider):
     start_urls = ["https://edition.cnn.com/article/sitemap-"+str(year)+"-"+str(month)+".html"]
 
     custom_settings = {
-        'FEED_URI': 'databases/CNN_' + year + '_' + month + '.xml',
-        'FEED_FORMAT': 'xml'
+        "FEED_URI": "databases/CNN_" + year + "_" + month + ".xml",
+        "FEED_FORMAT": "xml"
         }
     
     # Initiating singnals for starting and finishing the scraping process
@@ -30,15 +30,15 @@ class CnnSpider(scrapy.Spider):
         return spider
 
     def spider_opened(self, spider):
-        print('1/4: Opened {} spider'.format(spider.name))
-        print(f'2/4: Running...')
+        print("1/4: Opened {} spider".format(spider.name))
+        print("2/4: Running...")
 
     # Calling access.py uppon finishig the scraping process (if desired by the user) 
     def spider_closed(self, spider):
-        print('3/4: Closed {} spider'.format(spider.name))
+        print("3/4: Closed {} spider".format(spider.name))
         access = str(input("4/4: Do you want to search the scraped data (y/n)?: "))
         if access == "y":
-            print(f'Accessing the xml internally...')
+            print("Accessing the xml internally...")
             access_xml()
 
     # Parse the sitemap - view of the given month
@@ -78,6 +78,10 @@ class CnnSpider(scrapy.Spider):
          # In cases where [author] is present, remove "By" (e.g. "By [author name]" --> "[author name]")
         if author.lower()[:3] == "by ":
             author = author[3:]
+        elif author.lower()[:9] == "story by ":
+            author = author[9:]
+        elif author.lower()[:12] == "analysis by ":
+            author = author[12:]
         elif author.lower()[:5] == "from ":
             author = author[5:]
         item["author"] = author
