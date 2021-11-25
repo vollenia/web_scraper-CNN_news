@@ -75,7 +75,8 @@ class CnnSpider(scrapy.Spider):
         # Set "author" to "CNN" if author is missing
         if author == "" or author.lower() == "by": # older articles are missing the author (e.g. "By ")
             author = "CNN"
-         # In cases where [author] is present, remove "By" (e.g. "By [author name]" --> "[author name]")
+        # In cases where [author] is present, remove "By" (e.g. "By [author name]" --> "[author name]")
+        # Cases with "CNN's [author]" have been left unprocessed since it represents a collaboration between CNN and other sources
         if author.lower()[:3] == "by ":
             author = author[3:]
         elif author.lower()[:9] == "story by ":
