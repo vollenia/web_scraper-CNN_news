@@ -3,7 +3,7 @@
 ## Summary
 The goal of this project is to collect data from the CNN (Cable News Network) website for a time specific window, store it in a database which can then be searched for specific contents.
 
-To run the code call _scrapy crawl CNN_ from the terminal. When prompted, provide the full year then month (month without the leading 0 for single-digit months).
+To run the code, navigate to the root directory of the project and call "scrapy crawl CNN". When prompted, provide the full year then month (month without the leading 0 for single-digit months).
 After the scraping process is finished the .xml database will be stored to the _databases_ directory and can be accessed directly or later by running _access.py_.
 When accessing the database, select the database, one of the _tags_ that is to be searched and provide a keyword to be searched for.
 Articles that meet the requirements will be printed in full (including the content of all the tags) to console while displaying the total number of articles found.
